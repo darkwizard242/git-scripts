@@ -11,6 +11,7 @@
 	
 * Creating branches out of any existing tag within one or multiple repositories.
 
+* Merge a branch into another branch within one or multiple repositories.
 
 ## Scripts
 
@@ -19,35 +20,48 @@
 	* will clone the repository locally.
 	* will ask for the branch that the tags needs to be created from.
 	* will ask for the name of the tag to be created.
+	* Read repository names from the file called "repos.txt". These are stated in the file with one on each line.
 	* will clone the repository locally.
 	* will create a git tag locally and push it onto the remote repository. 
-	* It will read on a per line basis from a file called repos.txt which contains a list of all the repositories. Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that tag will be created on each of those repositories listed in repos.txt file.
+	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that tag will be created on each of those repositories listed in repos.txt file.
 
 2. `tag_delete.sh` file does the following:
 	* will ask for git repo user/pass
 	* will ask for the tag name that needs to be removed.
+	* Read repository names from the file called "repos.txt". These are stated in the file with one on each line.
 	* will clone the repository locally.
 	* will remove the tag and push it.
-	* It will read on a per line basis from a file called repos.txt which contains a list of all the repositories. Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that tag will be removed from all repositories listed in repos.txt file.
+	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that tag will be removed from all repositories listed in repos.txt file.
 
 3. `branch_create-from-branch.sh` file does the following:
 	* will ask for git repo user/pass
 	* will ask for the name of an existing branch that you want to create a branch out of.
 	* will ask for the name of the new branch.
+	* Read repository names from the file called "repos.txt". These are stated in the file with one on each line.
 	* will clone the repository locally.
 	* will create a new branch from the desired existing branch and push it onto remote.
-	* It will read on a per line basis from a file called repos.txt which contains a list of all the repositories. Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file.
-
+	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file.
 
 4. `branch_create-from-tag.sh` file does the following:
 	* will ask for git repo user/pass
 	* will ask for the name of an existing tag that you want to create a branch out of.
 	* will ask for the name of the new branch.
+	* Read repository names from the file called "repos.txt". These are stated in the file with one on each line.
 	* will clone the repository locally.
 	* will create a new branch from the desired existing tag and push it onto remote.
-	* It will read on a per line basis from a file called repos.txt which contains a list of all the repositories. Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file
+	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file
+
+5. `branch_merge-from-branch.sh` file does the following:
+	* will ask for git repo user/pass
+	* will ask for the name of the branch that you want to merge into (for .e.g master).
+	* will ask for the name of the branch that you want to merge from (for .e.g develop).
+	* will ask for a commit message that will be passed to the branch that is being merged into(for .e.g a commit message to be stored in the master branch), since it will perform a squash merge - only this message will be stored.
+	* Read repository names from the file called "repos.txt". These are stated in the file with one on each line.
+	* will clone the repository locally. 
+	* will merge the branches as provided.
+	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, specified branch will be merged on to the desired branch within all repositories listed in repos.txt file
 	
-5. `repos.txt` 
+6. `repos.txt`
 	* A file that contains the name of repositories as mentioned above. The above scripts read this file to perform actions. Each line should only contain a single repository's name and since shell scripts will be reading from this file, it's best to ensure the that `EOL` (End-of-Line) character of the file is `LF`.
 
 
@@ -70,3 +84,4 @@
 	* `./tag_delete.sh`
 	* `./branch_create-from-branch.sh`
 	* `./branch_create-from-tag.sh`
+	* `./branch_merge-from-branch.sh`
