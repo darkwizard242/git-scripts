@@ -13,7 +13,6 @@
 
 * Merge a branch into another branch within one or multiple repositories.
 
-
 ## Scripts
 
 1. `tag_add.sh` file does the following: 
@@ -43,7 +42,6 @@
 	* will create a new branch from the desired existing branch and push it onto remote.
 	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file.
 
-
 4. `branch_create-from-tag.sh` file does the following:
 	* will ask for git repo user/pass
 	* will ask for the name of an existing tag that you want to create a branch out of.
@@ -63,7 +61,7 @@
 	* will merge the branches as provided.
 	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, specified branch will be merged on to the desired branch within all repositories listed in repos.txt file
 	
-6. `repos.txt` 
+6. `repos.txt`
 	* A file that contains the name of repositories as mentioned above. The above scripts read this file to perform actions. Each line should only contain a single repository's name and since shell scripts will be reading from this file, it's best to ensure the that `EOL` (End-of-Line) character of the file is `LF`.
 
 
