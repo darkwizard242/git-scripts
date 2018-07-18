@@ -11,7 +11,7 @@
 	
 * Creating branches out of any existing tag within one or multiple repositories.
 
-* Merged a branch into another branch within one or multiple repositories.
+* Merge a branch into another branch within one or multiple repositories.
 
 
 ## Scripts
