@@ -42,6 +42,7 @@
 	* will create a new branch from the desired existing branch and push it onto remote.
 	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file.
 
+
 4. [branch_create-from-tag.sh](https://github.com/Tech-Overlord/git-scripts/blob/master/bash/github/create/branch/branch_create-from-tag.sh) file does the following:
 	* will ask for git repo user/pass
 	* will ask for the name of an existing tag that you want to create a branch out of.
@@ -50,6 +51,7 @@
 	* will clone the repository locally.
 	* will create a new branch from the desired existing tag and push it onto remote.
 	* Each line contains the a single repository's name which is read, assigned a variable and used within the script using a while loop. In doing so, that new branch will be created onto all repositories listed in repos.txt file
+
 
 5. [branch_merge-from-branch.sh](https://github.com/Tech-Overlord/git-scripts/blob/master/bash/github/merge/branch_merge-from-branch.sh) file does the following:
 	* will ask for git repo user/pass
